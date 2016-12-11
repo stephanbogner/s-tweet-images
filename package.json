@@ -1,0 +1,10 @@
+{
+  "name": "s-tweet-images",
+  "version": "0.1.0",
+  "description": "Tweets a directory of images",
+  "author": "Stephan Bogner <hello@stephanbogner.de>",
+  "dependencies": {
+    "async": "2.0.1",
+    "twit": "2.2.5"
+  }
+}
