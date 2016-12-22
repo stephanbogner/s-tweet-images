@@ -1,18 +1,18 @@
 var fs = require('fs')
 var Twit = require('twit')
 var async = require("async");
-
+var credentials = require('./credentials.js');
 
 var T = new Twit({
-  consumer_key:         '...',
-  consumer_secret:      '...',
-  access_token:         '...',
-  access_token_secret:  '...',
+  consumer_key:         credentials.twitter.consumer_key,
+  consumer_secret:      credentials.twitter.consumer_secret,
+  access_token:         credentials.twitter.access_token,
+  access_token_secret:  credentials.twitter.access_token_secret,
   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 })
 
 var timeStamp = getCurrentUnixTimeStamp();
-var tweetsCsv = fs.createWriteStream('../' + timeStamp + '_tweets.csv');
+var tweetsCsv = fs.createWriteStream('../export/' + timeStamp + '_tweets.csv');
 tweetsCsv.write("id,text,displayUrl\n");
 
 startProcess(process.cwd());
