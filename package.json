@@ -5,6 +5,7 @@
   "author": "Stephan Bogner <hello@stephanbogner.de>",
   "dependencies": {
     "async": "2.0.1",
-    "twit": "2.2.5"
+    "twit": "2.2.5",
+    "node-natural-sort": "0.8.6"
   }
 }
